@@ -25,33 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar save;
-save = false
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(save==true &amp;&amp; !instance_exists(YesChoice_obj) &amp;&amp; !instance_exists(GameSavedText))
-{
-if(file_exists("Save.sav")) file_delete("Save.sav");
+            <string>if(file_exists("Save.sav")) file_delete("Save.sav");
 
 ini_open("Save.sav");
 //room
@@ -67,6 +41,7 @@ var CharMgc = global.char_mgc;
 var CharDef = global.char_def;
 var CharLck = global.char_lck;
 var CharBox = global.char_box;
+
 
 //DpadUp
 var DpadUpX = dpad_up_obj.x;
@@ -95,6 +70,30 @@ var InvenButY = inven_button_obj.y;
 //settings button
 var SettingButX = Settings_button_obj.x;
 var SettingButY = Settings_button_obj.y;
+
+
+//Dpad Save
+ini_write_real("Save1","DpadUpX",DpadUpX);
+ini_write_real("Save1","DpadUpY",DpadUpY);
+ini_write_real("Save1","DpadDownX",DpadDownX);
+ini_write_real("Save1","DpadDownY",DpadDownY);
+ini_write_real("Save1","DpadLeftX",DpadLeftX);
+ini_write_real("Save1","DpadLeftY",DpadLeftY);
+ini_write_real("Save1","DpadRightX",DpadRightX);
+ini_write_real("Save1","DpadRightY",DpadRightY);
+
+//inven save
+ini_write_real("Save1","InvenButX",InvenButX);
+ini_write_real("Save1","InvenButY",InvenButY);
+
+//setting save
+ini_write_real("Save1","SettingButX",InvenButX);
+ini_write_real("Save1","SettingButY",InvenButY);
+
+//map save
+ini_write_real("Save1","MapButX",MapButX);
+ini_write_real("Save1","MapButY",MapButY);
+
 
 //Inventory
 //items
@@ -177,34 +176,72 @@ ini_write_real("Save1","CharLck",CharLck);
 ini_write_real("Save1","CharBox",CharBox);
 
 
-//Dpad Save
-ini_write_real("Save1","DpadUpX",DpadUpX);
-ini_write_real("Save1","DpadUpY",DpadUpY);
-ini_write_real("Save1","DpadDownX",DpadDownX);
-ini_write_real("Save1","DpadDownY",DpadDownY);
-ini_write_real("Save1","DpadLeftX",DpadLeftX);
-ini_write_real("Save1","DpadLeftY",DpadLeftY);
-ini_write_real("Save1","DpadRightX",DpadRightX);
-ini_write_real("Save1","DpadRightY",DpadRightY);
-
-//inven save
-ini_write_real("Save1","InvenButX",InvenButX);
-ini_write_real("Save1","InvenButY",InvenButY);
-
-//setting save
-ini_write_real("Save1","SettingButX",InvenButX);
-ini_write_real("Save1","SettingButY",InvenButY);
-
-//map save
-ini_write_real("Save1","MapButX",MapButX);
-ini_write_real("Save1","MapButY",MapButY);
-
 ini_close();
 save=false;
-}
+
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>321</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_message</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>Game Saved</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>10</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

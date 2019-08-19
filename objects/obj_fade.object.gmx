@@ -66,20 +66,11 @@ audio_stop_sound(No1_title_screen);
 
 if(!file_exists("Save.sav"))
 room_goto(Difficulty);
+else{
+instance_create(x,y,load_obj)
 
-else if(file_exists("Save.sav"))
-{
-ini_open("Save.sav");
-var LoadedRoom = ini_read_real("Save1","room",forest_start);
-ini_close();
-instance_create(32,32,load_obj);
-global.load = true;
-load_obj.LoadedRoom = LoadedRoom
-room_goto(LoadedRoom);
-}
-}
 
-}
+}}}
 </string>
           </argument>
         </arguments>

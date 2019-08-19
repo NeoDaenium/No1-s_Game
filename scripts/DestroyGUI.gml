@@ -1,24 +1,24 @@
 
 with(dpad_down_obj)
-instance_destroy();
+visible = false
 
 with(dpad_left_obj)
-instance_destroy();
+visible = false
 
 with(dpad_right_obj)
-instance_destroy();
+visible = false
 
 with(dpad_up_obj)
-instance_destroy();
+visible = false
 
 with(inven_button_obj)
-instance_destroy();
+visible = false
 
 with(Settings_button_obj)
-instance_destroy();
+visible = false
 
 with(arrow_obj)
-instance_destroy();
+visible = false
 
 map_button_obj.active=0;
 map_button_obj.visible = false;

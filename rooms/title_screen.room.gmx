@@ -56,16 +56,15 @@ window_get_width();</code>
     <instance objName="ButtonsGround" x="576" y="512" name="inst_A9CFA40E" locked="0" code="" scaleX="1.65517246723175" scaleY="2.53465342521667" colour="4294967295" rotation="0"/>
     <instance objName="title_object" x="352" y="32" name="inst_EFC48EB4" locked="0" code="" scaleX="0.733524024486542" scaleY="0.636816024780273" colour="4294967295" rotation="0"/>
     <instance objName="bg_object" x="-256" y="-32" name="inst_C9A77BEB" locked="0" code="" scaleX="1.50146996974945" scaleY="1.05555999279022" colour="4294967295" rotation="0"/>
-    <instance objName="save_obj" x="32" y="0" name="inst_A4A3B0A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bgm_obj" x="64" y="0" name="inst_B843B904" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="AboutStick" x="704" y="576" name="inst_CA4F1AFF" locked="0" code="" scaleX="1.6410299539566" scaleY="0.566371977329254" colour="4294967295" rotation="10"/>
-    <instance objName="NO1_title_object" x="96" y="32" name="inst_8F0E6925" locked="0" code="" scaleX="1.54010999202728" scaleY="1.43536996841431" colour="4294967295" rotation="0"/>
+    <instance objName="NO1_title_object" x="96" y="96" name="inst_8F0E6925" locked="0" code="" scaleX="1.54010999202728" scaleY="1.43536996841431" colour="4294967295" rotation="0"/>
     <instance objName="PlayStick" x="800" y="384" name="inst_2C17923F" locked="0" code="" scaleX="1.56097996234894" scaleY="1.12775003910065" colour="4294967295" rotation="11"/>
     <instance objName="OptionStick" x="1056" y="480" name="inst_DA3A746D" locked="0" code="" scaleX="1.60000002384186" scaleY="1.03703701496124" colour="4294967295" rotation="-5"/>
     <instance objName="about_button" x="736" y="544" name="inst_A725FE36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="5"/>
     <instance objName="play_button" x="832" y="352" name="inst_A41D4F4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="10"/>
     <instance objName="options_button" x="1088" y="512" name="inst_62BDEDB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-7"/>
-    <instance objName="LoadFlower_obj" x="512" y="640" name="inst_A00B708B" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="Status" x="-64" y="0" name="inst_373A5A92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -76,9 +76,13 @@ global.music = audio_play_sound(bgm_castle,5,true);
 
 else if(room == title_screen)
 {
+if audio_is_playing(bgm_castle)
 audio_stop_sound(bgm_castle);
+if audio_is_playing(bgm_forest)
 audio_stop_sound(bgm_forest);
+if audio_is_playing(bgm_sewers)
 audio_stop_sound(bgm_sewers);
+if audio_is_playing(bgm_town)
 audio_stop_sound(bgm_town);
 
 if(audio_is_playing(No1_title_screen))

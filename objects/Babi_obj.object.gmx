@@ -29,7 +29,7 @@
 
 press=0;
 interact=0;
-
+BabiAlive = true
 InterDialogue=0;
 
 

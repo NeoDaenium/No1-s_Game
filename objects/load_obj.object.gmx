@@ -25,35 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar load;
-load=false;
-
-LoadedRoom="";
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(global.load==true &amp;&amp; room == LoadedRoom)
-{
-ini_open("Save.sav");
+            <string>ini_open("Save.sav");
 //load Char
 var CharX = ini_read_real("Save1","CharX",0);
 var CharY = ini_read_real("Save1","CharY",0);
@@ -142,9 +114,11 @@ instance_create(DpadDownX,DpadDownY,dpad_down_obj);
 instance_create(DpadLeftX,DpadLeftY,dpad_left_obj);
 instance_create(DpadRightX,DpadRightY,dpad_right_obj);
 instance_create(MapButX,MapButY,map_button_obj);
-map_button_obj.active=1;
 instance_create(InvenButX,InvenButY,inven_button_obj);
 instance_create(SettingButX,SettingButY,Settings_button_obj);
+
+map_button_obj.active=1;
+
 
 bgm_obj.bgm_forest = Dawn_of_Forests;
 
@@ -189,8 +163,14 @@ global.char_def = CharDef;
 global.char_lck = CharLck;
 global.char_box = CharBox;
 
+ini_open("Save.sav");
+var LoadedRoom = ini_read_real("Save1","room",forest_start);
+ini_close();
+global.load = true;
+load_obj.LoadedRoom = LoadedRoom
+room_goto(LoadedRoom);
 instance_destroy();
-}
+
 </string>
           </argument>
         </arguments>

@@ -1,35 +1,24 @@
-/*
 with(dpad_down_obj)
-{
-press=0;
-visible = true;
-}
+visible = true
 
 with(dpad_left_obj)
-{
-press=0;
-visible = true;
-}
+visible = true
 
 with(dpad_right_obj)
-{
-press=0;
-visible = true;
-}
+visible = true
 
 with(dpad_up_obj)
-{
-press=0;
-visible = true;
-}
-*/
-instance_create(x,y,dpad_up_obj);
-instance_create(x,y,dpad_down_obj);
-instance_create(x,y,dpad_left_obj);
-instance_create(x,y,dpad_right_obj);
+visible = true
 
-instance_create(x,y,inven_button_obj);
-instance_create(x,y,Settings_button_obj);
+with(inven_button_obj)
+visible = true
+
+with(Settings_button_obj)
+visible = true
+
+with(arrow_obj)
+visible = true
+
 map_button_obj.active=1;
 map_button_obj.visible = true;
 
